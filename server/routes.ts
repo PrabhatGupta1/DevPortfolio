@@ -28,8 +28,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
         html: emailTemplate.html,
       });
       
-      console.log("Email sent result:", emailSent);
-      
       if (emailSent) {
         console.log("Email sent successfully for contact:", contact.id);
         res.json({ 
@@ -37,7 +35,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           message: "Message sent successfully! I'll get back to you soon." 
         });
       } else {
-        console.log("Triggering fallback mode for contact:", contact.id);
+        console.log("Email failed, using mailto fallback for contact:", contact.id);
         // Return mailto fallback if email fails
         const mailtoSubject = encodeURIComponent(`Portfolio Contact: ${validatedData.subject}`);
         const mailtoBody = encodeURIComponent(`From: ${validatedData.name} (${validatedData.email})
@@ -50,15 +48,12 @@ ${validatedData.message}
 ---
 This message was submitted through your portfolio contact form.`);
         
-        const fallbackResponse = { 
+        res.json({ 
           success: true, 
           fallbackMode: true,
           mailto: `mailto:myemail@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`,
           message: "Please click the link below to send your message via email." 
-        };
-        
-        console.log("Sending fallback response:", fallbackResponse);
-        res.json(fallbackResponse);
+        });
       }
     } catch (error) {
       if (error instanceof z.ZodError) {
