@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendEmail, createContactEmailTemplate } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -11,9 +12,27 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
       
-      // In a real application, you would send an email here
-      // For now, we'll just store the contact and return success
-      console.log("New contact received:", contact);
+      // Send email notification
+      const emailTemplate = createContactEmailTemplate(
+        validatedData.name,
+        validatedData.email,
+        validatedData.subject,
+        validatedData.message
+      );
+      
+      const emailSent = await sendEmail({
+        to: "your.email@example.com", // Replace with your actual email
+        from: "noreply@yourportfolio.com", // Use a verified sender email
+        subject: `Portfolio Contact: ${validatedData.subject}`,
+        text: emailTemplate.text,
+        html: emailTemplate.html,
+      });
+      
+      if (emailSent) {
+        console.log("Email sent successfully for contact:", contact.id);
+      } else {
+        console.error("Failed to send email for contact:", contact.id);
+      }
       
       res.json({ 
         success: true, 

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Instagram, Download, Code, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Download, Code, Mail, Twitter } from "lucide-react";
 import { useScrollAnimation } from "@/lib/animations";
 
 export function HeroSection() {
@@ -26,7 +26,7 @@ export function HeroSection() {
         <div className="text-center animate-fade-in">
           <div className="mb-8">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150"
+              src="https://media.licdn.com/dms/image/v2/D5603AQEj-xNu5XJ0Dw/profile-displayphoto-shrink_200_200/B56ZQBP5tpG4Ac-/0/1735187734660?e=1754524800&v=beta&t=-U5m5ezVAqpZCyENY7na6J8ZrddeP9ww8jwI87Z7gaM"
               alt="Professional developer portrait"
               className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto object-cover shadow-2xl ring-4 ring-primary/20 animate-float"
             />
@@ -76,22 +76,28 @@ export function HeroSection() {
 
           <div className="flex justify-center space-x-6">
             <a
-              href="#"
+              href="https://github.com/PrabhatGupta1"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/prabhatgupta012/"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="https://instagram.com/prabhatgupta_101"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >
               <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href="https://x.com/Prabhat_Gupta__"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
+            >
+              <Twitter className="w-6 h-6" />
             </a>
           </div>
         </div>

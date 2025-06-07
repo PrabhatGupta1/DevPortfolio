@@ -1,4 +1,4 @@
-import { Server, Monitor, Box, Zap, Database, Layers, Share2, Cloud, Atom, Triangle, Smartphone, Wind, Flame, Settings } from "lucide-react";
+import { Server, Monitor, Box, Zap, Database, Layers, Share2, Cloud, Atom, Triangle, Smartphone, Wind, Flame, Settings, Code2, Hash, Braces, FileText, Binary, GitBranch } from "lucide-react";
 import { useScrollAnimation } from "@/lib/animations";
 
 export function SkillsSection() {
@@ -22,6 +22,15 @@ export function SkillsSection() {
     { name: "Expo", icon: Settings, color: "text-gray-600" },
   ];
 
+  const programmingSkills = [
+    { name: "Core Java", icon: FileText, color: "text-red-600" },
+    { name: "C#", icon: Hash, color: "text-purple-600" },
+    { name: "JavaScript", icon: Braces, color: "text-yellow-600" },
+    { name: "OOPs", icon: Code2, color: "text-blue-600" },
+    { name: "Data Structures", icon: Binary, color: "text-green-600" },
+    { name: "Algorithms", icon: GitBranch, color: "text-indigo-600" },
+  ];
+
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -32,7 +41,7 @@ export function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12">
           {/* Backend Skills */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
@@ -40,7 +49,7 @@ export function SkillsSection() {
               Backend Development
             </h3>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {backendSkills.map((skill) => (
                 <div
                   key={skill.name}
@@ -64,8 +73,32 @@ export function SkillsSection() {
               Frontend Development
             </h3>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {frontendSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="skill-card bg-card p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border"
+                >
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-background rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <skill.icon className={`w-6 h-6 ${skill.color}`} />
+                    </div>
+                    <h4 className="font-semibold">{skill.name}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Programming & Problem Solving Skills */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold mb-6 flex items-center">
+              <Code2 className="w-6 h-6 mr-3 text-emerald-600" />
+              Programming & Problem Solving
+            </h3>
+
+            <div className="grid grid-cols-2 gap-4">
+              {programmingSkills.map((skill) => (
                 <div
                   key={skill.name}
                   className="skill-card bg-card p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border"

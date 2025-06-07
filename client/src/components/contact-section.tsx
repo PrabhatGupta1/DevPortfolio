@@ -78,7 +78,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">your.email@example.com</p>
+                  <p className="text-muted-foreground">prabhatgupta428@gmail.com</p>
                 </div>
               </div>
 
@@ -88,7 +88,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">GitHub</h4>
-                  <p className="text-muted-foreground">@yourusername</p>
+                  <p className="text-muted-foreground">@PrabhatGupta1</p>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">LinkedIn</h4>
-                  <p className="text-muted-foreground">@yourprofile</p>
+                  <p className="text-muted-foreground">@prabhatgupta012</p>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Instagram</h4>
-                  <p className="text-muted-foreground">@yourmusicprofile</p>
+                  <p className="text-muted-foreground">@prabhatgupta_101</p>
                 </div>
               </div>
             </div>

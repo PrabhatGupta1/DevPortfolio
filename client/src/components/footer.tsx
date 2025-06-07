@@ -9,25 +9,25 @@ export function Footer() {
             <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing Together</h3>
             <div className="flex justify-center space-x-6">
               <a
-                href="#"
+                href="https://github.com/PrabhatGupta1 q"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/prabhatgupta012/"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href=""
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:prabhatgupta428@gmail.com"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Mail className="w-6 h-6" />
@@ -37,7 +37,7 @@ export function Footer() {
 
           <div className="border-t border-slate-700 pt-8">
             <p className="text-slate-400">
-              © 2024 DevPortfolio. Built with ❤️ using React, Next.js, and Tailwind CSS.
+              © 2025 Prabhat Gupta. Built with ❤️.
             </p>
           </div>
         </div>
