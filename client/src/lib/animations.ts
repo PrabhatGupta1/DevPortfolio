@@ -9,6 +9,8 @@ export function useScrollAnimation() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-slide-up");
+            // Remove initial opacity and transform classes if they exist
+            entry.target.classList.remove("opacity-0", "translate-y-8");
           }
         });
       },
@@ -18,13 +20,14 @@ export function useScrollAnimation() {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

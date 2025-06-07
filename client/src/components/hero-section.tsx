@@ -23,7 +23,7 @@ export function HeroSection() {
       className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center opacity-0 translate-y-8 transition-all duration-700 ease-out">
+        <div className="text-center animate-fade-in">
           <div className="mb-8">
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150"
