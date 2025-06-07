@@ -21,23 +21,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
       );
       
       const emailSent = await sendEmail({
-        to: "your.email@example.com", // Replace with your actual email
+        to: "myemail@gmail.com", // Replace with your actual email
         from: "noreply@yourportfolio.com", // Use a verified sender email
         subject: `Portfolio Contact: ${validatedData.subject}`,
         text: emailTemplate.text,
         html: emailTemplate.html,
       });
       
+      console.log("Email sent result:", emailSent);
+      
       if (emailSent) {
         console.log("Email sent successfully for contact:", contact.id);
+        res.json({ 
+          success: true, 
+          message: "Message sent successfully! I'll get back to you soon." 
+        });
       } else {
-        console.error("Failed to send email for contact:", contact.id);
+        console.log("Triggering fallback mode for contact:", contact.id);
+        // Return mailto fallback if email fails
+        const mailtoSubject = encodeURIComponent(`Portfolio Contact: ${validatedData.subject}`);
+        const mailtoBody = encodeURIComponent(`From: ${validatedData.name} (${validatedData.email})
+
+Subject: ${validatedData.subject}
+
+Message:
+${validatedData.message}
+
+---
+This message was submitted through your portfolio contact form.`);
+        
+        const fallbackResponse = { 
+          success: true, 
+          fallbackMode: true,
+          mailto: `mailto:myemail@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`,
+          message: "Please click the link below to send your message via email." 
+        };
+        
+        console.log("Sending fallback response:", fallbackResponse);
+        res.json(fallbackResponse);
       }
-      
-      res.json({ 
-        success: true, 
-        message: "Message sent successfully! I'll get back to you soon." 
-      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ 

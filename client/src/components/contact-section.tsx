@@ -32,10 +32,19 @@ export function ContactSection() {
       return response.json();
     },
     onSuccess: (data) => {
-      toast({
-        title: "Message sent successfully!",
-        description: "I'll get back to you soon.",
-      });
+      if (data.fallbackMode && data.mailto) {
+        // Open mailto link in fallback mode
+        window.open(data.mailto, '_blank');
+        toast({
+          title: "Email client opened",
+          description: "Please send the message from your email application.",
+        });
+      } else {
+        toast({
+          title: "Message sent successfully!",
+          description: "I'll get back to you soon.",
+        });
+      }
       form.reset();
     },
     onError: (error: any) => {
