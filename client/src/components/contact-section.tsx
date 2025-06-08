@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Github, Linkedin, Instagram, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, Send, Twitter } from "lucide-react";
 import { insertContactSchema, type InsertContact } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useScrollAnimation } from "@/lib/animations";
@@ -119,7 +119,17 @@ export function ContactSection() {
                   <h4 className="font-semibold">Instagram</h4>
                   <p className="text-muted-foreground">@prabhatgupta_101</p>
                 </div>
-              </div>
+              </div>     
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Twitter className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Twitter</h4>
+                  <p className="text-muted-foreground">@Prabhat_Gupta__</p>
+                </div>
+              </div>     
             </div>
           </div>
 

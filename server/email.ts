@@ -1,6 +1,6 @@
 import { MailService } from '@sendgrid/mail';
 
-const apiKey = process.env.SENDGRID_API_KEY;
+const apiKey = process.env.SENDGRID_API_KEY || 'SG.mySendgridKey';
 if (!apiKey) {
   throw new Error("SENDGRID_API_KEY environment variable must be set");
 }

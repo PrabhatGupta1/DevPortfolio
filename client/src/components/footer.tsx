@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,24 +9,35 @@ export function Footer() {
             <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing Together</h3>
             <div className="flex justify-center space-x-6">
               <a
-                href="https://github.com/PrabhatGupta1 q"
+                target="_blanck"
+                href="https://github.com/PrabhatGupta1"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Github className="w-6 h-6" />
               </a>
               <a
+                target="_blanck"
                 href="https://www.linkedin.com/in/prabhatgupta012/"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href=""
+                target="_blanck"
+                href="https://instagram.com/prabhatgupta_101"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
+                target="_blanck"
+                href="https://x.com/Prabhat_Gupta__"
+                className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a
+                target="_blanck"
                 href="mailto:prabhatgupta428@gmail.com"
                 className="text-slate-300 hover:text-white transition-colors duration-200 transform hover:scale-110"
               >

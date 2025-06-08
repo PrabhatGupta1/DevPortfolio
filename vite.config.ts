@@ -16,6 +16,7 @@ export default defineConfig({
         ]
       : []),
   ],
+  base: '/DevPortfolio/', // Replace with your actual repo name
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

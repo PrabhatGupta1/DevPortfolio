@@ -13,8 +13,12 @@ export function HeroSection() {
   };
 
   const handleResumeDownload = () => {
-    // In a real application, this would download the actual resume
-    alert("Resume download functionality - implement with actual file serving");
+    const link = document.createElement("a");
+    link.href = "/api/resume"; // Your backend route
+    link.download = "PrabhatGuptaResume.pdf"; // Optional: Suggests a filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -76,24 +80,28 @@ export function HeroSection() {
 
           <div className="flex justify-center space-x-6">
             <a
+              target="_blanck"
               href="https://github.com/PrabhatGupta1"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
+              target="_blanck"
               href="https://www.linkedin.com/in/prabhatgupta012/"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
+              target="_blanck"
               href="https://instagram.com/prabhatgupta_101"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >
               <Instagram className="w-6 h-6" />
             </a>
             <a
+              target="_blanck"
               href="https://x.com/Prabhat_Gupta__"
               className="text-muted-foreground hover:text-primary transition-colors duration-200 transform hover:scale-110"
             >

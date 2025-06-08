@@ -1,4 +1,4 @@
-import { Server, Monitor, Box, Zap, Database, Layers, Share2, Cloud, Atom, Triangle, Smartphone, Wind, Flame, Settings, Code2, Hash, Braces, FileText, Binary, GitBranch } from "lucide-react";
+import { Server, Monitor, Box, Zap, Database, Layers, Share2, Cloud, Atom, Triangle, Smartphone, Wind, Flame, Settings, Code2, Hash, Braces, FileText, Binary, GitBranch, LayoutTemplate } from "lucide-react";
 import { useScrollAnimation } from "@/lib/animations";
 
 export function SkillsSection() {
@@ -9,7 +9,7 @@ export function SkillsSection() {
     { name: "Express.js", icon: Zap, color: "text-gray-600" },
     { name: "PostgreSQL", icon: Database, color: "text-blue-600" },
     { name: "Prisma", icon: Layers, color: "text-indigo-600" },
-    { name: "GraphQL", icon: Share2, color: "text-purple-600" },
+    { name: "Strapi CMS", icon: LayoutTemplate, color: "text-purple-600" },
     { name: "GCP", icon: Cloud, color: "text-orange-600" },
   ];
 
@@ -94,7 +94,7 @@ export function SkillsSection() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
               <Code2 className="w-6 h-6 mr-3 text-emerald-600" />
-              Programming & Problem Solving
+              Problem Solving
             </h3>
 
             <div className="grid grid-cols-2 gap-4">

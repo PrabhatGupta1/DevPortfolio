@@ -4,6 +4,11 @@ import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import { sendEmail, createContactEmailTemplate } from "./email";
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -21,7 +26,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       );
       
       const emailSent = await sendEmail({
-        to: "myemail@gmail.com", // Replace with your actual email
+        to: "prabhatgupta428@gmail.com", // Replace with your actual email
         from: "noreply@yourportfolio.com", // Use a verified sender email
         subject: `Portfolio Contact: ${validatedData.subject}`,
         text: emailTemplate.text,
@@ -51,7 +56,7 @@ This message was submitted through your portfolio contact form.`);
         res.json({ 
           success: true, 
           fallbackMode: true,
-          mailto: `mailto:myemail@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`,
+          mailto: `mailto:prabhatgupta428@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`,
           message: "Please click the link below to send your message via email." 
         });
       }
@@ -85,9 +90,17 @@ This message was submitted through your portfolio contact form.`);
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-    // In a real application, this would serve the actual resume file
-    res.json({ 
-      message: "Resume download endpoint - implement with actual file serving" 
+    const filePath = join(__dirname, "../server/public/resume.pdf");
+
+    // Prevent caching
+    res.setHeader("Cache-Control", "no-cache");
+
+    // Trigger file download
+    res.download(filePath, "PrabhatGuptaResume.pdf", (err) => {
+      if (err) {
+        console.error("Error sending resume:", err);
+        res.status(500).send("Error downloading file.");
+      }
     });
   });
 

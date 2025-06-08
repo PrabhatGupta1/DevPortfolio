@@ -33,7 +33,7 @@ export function AboutSection() {
 
           <div className="order-1 lg:order-2">
             <img
-              src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-aa98-61f7-a9e1-a75eff2fd086/raw?se=2025-06-07T19%3A27%3A33Z&sp=r&sv=2024-08-04&sr=b&scid=8f2033f9-ac80-59fd-bf69-469e882756e1&skoid=c953efd6-2ae8-41b4-a6d6-34b1475ac07c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-07T01%3A00%3A22Z&ske=2025-06-08T01%3A00%3A22Z&sks=b&skv=2024-08-04&sig=cHAUEspj7aavHsgWEzNjbaw0xBUoYgJIy0J%2BQ%2Bfxv5M%3D"
+              src="https://pbs.twimg.com/media/Gs3VVM2aQAAttFI?format=jpg&name=small"
               alt="Developer workspace with multiple monitors and code"
               className="rounded-xl shadow-2xl w-full h-auto"
             />

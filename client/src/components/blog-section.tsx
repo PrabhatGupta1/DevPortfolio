@@ -25,9 +25,9 @@ export function BlogSection() {
               I'm working on creating valuable content about web development, best practices,
               and tutorials. Stay tuned for insightful articles and technical guides!
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105">
+            {/* <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105">
               Notify Me
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

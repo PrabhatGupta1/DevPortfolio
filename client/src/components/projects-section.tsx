@@ -24,8 +24,8 @@ export function ProjectsSection() {
       demo: "#",
     },
     {
-      title: "React Native App",
-      description: "Cross-platform Job Search mobile application with seamless user experience.",
+      title: "Job Search Mobile App",
+      description: "Cross-platform Job Search mobile application with seamless user experience. Job seekers can search and apply for real time available jobs according to their profiles.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
       tech: ["React Native", "Expo", "External APIs"],
       github: "https://github.com/PrabhatGupta1/JobSearchApp",
@@ -44,17 +44,17 @@ export function ProjectsSection() {
       description: "This is an online quiz website which provides quizes on various technologies and subjects built using HTML5, CSS3, Bootstrap and Javascript.",
       image: "https://prabhatgupta1.github.io/Portfolio/Images/onlinequiz.png",
       tech: ["Javascript", "HTML 5", "CSS 3"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Real-time analytics dashboard with interactive charts, data visualization, and automated reporting features.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      tech: ["React", "D3.js", "Node.js", "MongoDB"],
       github: "https://github.com/PrabhatGupta1/onlinequiz",
       demo: "https://prabhatgupta1.github.io/onlinequiz/",
     },
+    // {
+    //   title: "Analytics Dashboard",
+    //   description: "Real-time analytics dashboard with interactive charts, data visualization, and automated reporting features.",
+    //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    //   tech: ["React", "D3.js", "Node.js", "MongoDB"],
+    //   github: "https://github.com/PrabhatGupta1/onlinequiz",
+    //   demo: "https://prabhatgupta1.github.io/onlinequiz/",
+    // },
   ];
 
   return (
@@ -93,13 +93,13 @@ export function ProjectsSection() {
 
                 <div className="flex space-x-4">
                   <Button variant="outline" size="sm" asChild>
-                    <a href={project.github}>
+                    <a target="_blanck" href={project.github}>
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </a>
                   </Button>
                   <Button variant="outline" size="sm" asChild>
-                    <a href={project.demo}>
+                    <a target="_blanck" href={project.demo}>
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Demo
                     </a>
