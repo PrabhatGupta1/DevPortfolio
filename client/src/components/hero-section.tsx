@@ -14,7 +14,7 @@ export function HeroSection() {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/api/resume"; // Your backend route
+    link.href = "/DevPortfolio/resume.pdf";
     link.download = "PrabhatGuptaResume.pdf"; // Optional: Suggests a filename
     document.body.appendChild(link);
     link.click();

@@ -28,8 +28,26 @@ export function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
+      // const response = await apiRequest("POST", "/api/contact", data);
+      // return response.json();
+        // Return mailto fallback if email fails
+        const mailtoSubject = encodeURIComponent(`Portfolio Contact: ${data.subject}`);
+        const mailtoBody = encodeURIComponent(`From: ${data.name} (${data.email})
+
+Subject: ${data.subject}
+
+Message:
+${data.message}
+
+---
+This message was submitted through your portfolio contact form.`);
+        
+        return ({ 
+          success: true, 
+          fallbackMode: true,
+          mailto: `mailto:prabhatgupta428@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`,
+          message: "Please click the link below to send your message via email." 
+        });
     },
     onSuccess: (data) => {
       if (data.fallbackMode && data.mailto) {

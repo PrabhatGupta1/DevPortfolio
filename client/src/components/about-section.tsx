@@ -11,22 +11,16 @@ export function AboutSection() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Me</h2>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
-                I'm a Full Stack Developer with extensive experience in building scalable web applications
-                and mobile solutions. My journey in software development has been driven by a constant desire to learn
-                and implement cutting-edge technologies.
+                I'm your go-to Full Stack Developer with a passion for transforming ideas into powerful, real-world digital solutions. Whether you're a startup looking to launch your dream product or a business ready to elevate your online presence, I specialize in delivering scalable, high-performance applications that make an impact.
               </p>
               <p>
-                With expertise spanning both backend and frontend development, I specialize in creating seamless user
-                experiences backed by robust server-side architectures.
+                With expertise spanning both backend and frontend development, I create sleek, responsive, and user-friendly interfaces, backed by robust server-side logic and well-architected RESTful APIs. I also excel at integrating third-party services and ensuring seamless functionality across platforms—including mobile.
               </p>
               <p>
-                Beyond coding, I'm passionate about music and singing, which helps me maintain creativity and
-                balance in my work. I believe in continuous learning and staying updated with the latest
-                industry trends and best practices.
+                Beyond coding, I enjoy singing and music, which keeps me inspired and balanced. I thrive on collaboration, continuous learning, and building tech that truly matters.
               </p>
               <p>
-                I'm always excited to collaborate on innovative projects and connect with fellow developers
-                and creators who share similar passions for technology and creative expression.
+                Let’s connect and build something extraordinary—your vision, brought to life with precision and innovation.
               </p>
             </div>
           </div>
