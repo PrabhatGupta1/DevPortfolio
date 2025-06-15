@@ -30,7 +30,7 @@ export function HeroSection() {
         <div className="text-center animate-fade-in">
           <div className="mb-8">
             <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQEj-xNu5XJ0Dw/profile-displayphoto-shrink_200_200/B56ZQBP5tpG4Ac-/0/1735187734660?e=1754524800&v=beta&t=-U5m5ezVAqpZCyENY7na6J8ZrddeP9ww8jwI87Z7gaM"
+              src="/photo.jfif"
               alt="Professional developer portrait"
               className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto object-cover shadow-2xl ring-4 ring-primary/20 animate-float"
             />

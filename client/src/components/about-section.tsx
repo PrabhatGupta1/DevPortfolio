@@ -27,7 +27,7 @@ export function AboutSection() {
 
           <div className="order-1 lg:order-2">
             <img
-              src="https://pbs.twimg.com/media/Gs3VVM2aQAAttFI?format=jpg&name=small"
+              src="/aboutMe.png"
               alt="Developer workspace with multiple monitors and code"
               className="rounded-xl shadow-2xl w-full h-auto"
             />
