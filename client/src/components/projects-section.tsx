@@ -10,7 +10,7 @@ export function ProjectsSection() {
     {
       title: "Social Networking Platform",
       description: "A dynamic social networking platform empowering users to connect, collaborate, and share their passions. Seamlessly integrates user profiles and connections with the ability to create and share posts.",
-      image: "/tribesphere.png",
+      image: "/DevPortfolio/tribesphere.png",
       tech: ["Node.js", "PostgreSQL", "Express", "React", "EJS"],
       github: "https://github.com/PrabhatGupta1/tribesphereApp",
       demo: "#",
@@ -18,7 +18,7 @@ export function ProjectsSection() {
     {
       title: "Online Learning Platform",
       description: "Comprehensive e-learning platform with course management, where instructors can create and sell courses, students can enroll and learn from them.",
-      image: "/onlineLearningPlatform.png",
+      image: "/DevPortfolio/onlineLearningPlatform.png",
       tech: ["Asp.Net Core", "C#", "Entity Framwork", "SQL Server"],
       github: "https://github.com/PrabhatGupta1/OnlineLearningPlatform",
       demo: "#",
@@ -26,7 +26,7 @@ export function ProjectsSection() {
     {
       title: "Job Search Mobile App",
       description: "Cross-platform Job Search mobile application with seamless user experience. Job seekers can search and apply for real time available jobs according to their profiles.",
-      image: "/jobSearchMobileApp.png",
+      image: "/DevPortfolio/jobSearchMobileApp.png",
       tech: ["React Native", "Expo", "External APIs"],
       github: "https://github.com/PrabhatGupta1/JobSearchApp",
       demo: "#",
@@ -34,7 +34,7 @@ export function ProjectsSection() {
     {
       title: "Task Management Web App",
       description: "This is a user-friendly task management platform designed to enhance productivity built using HTML 5, CSS 3, Javascript, Bootstrap, Node.js, Express.js, EJS templating and PostgreSQL.",
-      image: "/taskMngWebApp.png",
+      image: "/DevPortfolio/taskMngWebApp.png",
       tech: ["Node.js", "Express", "PostgreSQL", "EJS", "Javascript"],
       github: "https://github.com/PrabhatGupta1/taskManagementWebApp",
       demo: "#",
@@ -42,7 +42,7 @@ export function ProjectsSection() {
     {
       title: "Online Quiz Website",
       description: "This is an online quiz website which provides quizes on various technologies and subjects built using HTML5, CSS3, Bootstrap and Javascript.",
-      image: "/onlinequiz.png",
+      image: "/DevPortfolio/onlinequiz.png",
       tech: ["Javascript", "HTML 5", "CSS 3"],
       github: "https://github.com/PrabhatGupta1/onlinequiz",
       demo: "https://prabhatgupta1.github.io/onlinequiz/",
